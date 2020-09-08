@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { viewportReducer } from './store/reducers/viewport.reducer';
 import { HeaderComponent } from './components/header/header.component';
 import { MegaMenuComponent } from './components/nav/mega-menu/mega-menu.component';
+import { LoginMenuComponent } from './components/nav/login-menu/login-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MegaMenuComponent } from './components/nav/mega-menu/mega-menu.componen
     NavComponent,
     HeaderComponent,
     MegaMenuComponent,
+    LoginMenuComponent,
   ],
   imports: [
     BrowserModule,

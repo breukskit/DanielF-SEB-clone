@@ -47,7 +47,7 @@
           >
         </li>
         <li class="fullsize-sidenav-list-item-login">
-          <button>
+          <button (click)="toggleLoginMenu()">
             <fa-icon [icon]="faLock"> </fa-icon
             ><a class="fullsize-sidenav-button-link" href="#">Logga in</a>
           </button>
@@ -67,10 +67,23 @@
           <fa-icon [icon]="faUser" size="sm"></fa-icon>
         </li>
         <li class="mobile-sidenav-list-item-login">
-          <button>
+          <button *ngIf="viewport !== 'small'" (click)="toggleLoginMenu()">
             <fa-icon [icon]="faLock"> </fa-icon
-            ><a class="mobile-sidenav-button-link" href="#">Logga in</a>
+            ><a
+              class="mobile-sidenav-button-link"
+              href="#"
+              *ngIf="viewport !== 'small'"
+              >Logga in</a
+            >
           </button>
+          <div
+            (click)="toggleLoginMenu()"
+            *ngIf="viewport !== 'medium'"
+            class="mobile-login-small"
+            [class.login-active]="loginMenu"
+          >
+            <fa-icon [icon]="faLock" size="sm"></fa-icon>
+          </div>
         </li>
         <li class="mobile-sidenav-list-item" (click)="toggleMegaMenu()">
           <fa-icon *ngIf="!megaMenu" [icon]="faBars" size="lg"></fa-icon>
@@ -83,4 +96,8 @@
 
 <div @fadeInOut *ngIf="megaMenu">
   <app-mega-menu></app-mega-menu>
+</div>
+
+<div @enterLeave *ngIf="loginMenu">
+  <app-login-menu></app-login-menu>
 </div>

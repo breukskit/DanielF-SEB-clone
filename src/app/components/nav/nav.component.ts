@@ -58,6 +58,13 @@ import {
         ),
       ]),
     ]),
+    trigger('enterLeave', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('100ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [animate('100ms', style({ opacity: 0 }))]),
+    ]),
   ],
 })
 export class NavComponent implements OnInit {
@@ -77,6 +84,12 @@ export class NavComponent implements OnInit {
 
   toggleMegaMenu() {
     this.megaMenu = !this.megaMenu;
+    this.loginMenu = false;
+  }
+
+  toggleLoginMenu() {
+    this.loginMenu = !this.loginMenu;
+    this.megaMenu = false;
   }
 
   constructor(private store: Store<IAppState>) {

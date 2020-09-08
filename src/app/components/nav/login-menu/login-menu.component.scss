@@ -1,0 +1,40 @@
+$primary-color: #0092e1;
+
+.login-menu {
+  position: absolute;
+  right: 3rem;
+  top: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 5px;
+  background-color: #ffffff;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    right: 5.2rem;
+    top: 59px;
+  }
+  @media (max-width: 766px) {
+    top: auto;
+    right: auto;
+    border-radius: 0;
+    border: none;
+    background-color: #f8f8f8;
+    width: 100%;
+  }
+  .login-menu-list {
+    width: 17.5rem;
+    @media (max-width: 766px) {
+      width: 100%;
+    }
+    .login-menu-item {
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      &:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: $primary-color;
+      }
+      .login-menu-link {
+        color: #333;
+      }
+    }
+  }
+}
