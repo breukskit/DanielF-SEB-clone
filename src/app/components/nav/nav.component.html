@@ -1,0 +1,81 @@
+<nav class="nav">
+  <div
+    class="fullsize-nav"
+    *ngIf="viewport !== 'small' && viewport !== 'medium'"
+  >
+    <div class="fullsize-nav-main-container">
+      <img
+        class="fullsize-logo"
+        src="../../../assets/logo.png"
+        alt="SEB logo"
+      />
+      <ul class="fullsize-navbar">
+        <li class="fullsize-navbar-list-item">
+          <a href="" class="fullsize-navbar-link">Privat</a>
+        </li>
+        <li class="fullsize-navbar-list-item">
+          <a href="" class="fullsize-navbar-link">Företag</a>
+        </li>
+        <li class="fullsize-navbar-list-item">
+          <a href="" class="fullsize-navbar-link">Bli Kund</a
+          ><fa-icon [icon]="faArrowRight" size="xs"></fa-icon>
+        </li>
+        <li class="fullsize-navbar-list-item">
+          <a href="" class="fullsize-navbar-link">Kundservice</a
+          ><fa-icon [icon]="faArrowRight" size="xs"></fa-icon>
+        </li>
+      </ul>
+    </div>
+    <div class="fullsize-sidenav">
+      <ul class="fullsize-sidenav-list">
+        <li class="fullsize-sidenav-list-item">
+          <fa-icon [icon]="faSearch"></fa-icon>
+          <a
+            *ngIf="viewport === 'xlarge'"
+            class="fullsize-sidenav-link"
+            href="#"
+            >Sök</a
+          >
+        </li>
+        <li class="fullsize-sidenav-list-item">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <a
+            *ngIf="viewport === 'xlarge'"
+            class="fullsize-sidenav-link"
+            href="#"
+            >Bli kund</a
+          >
+        </li>
+        <li class="fullsize-sidenav-list-item-login">
+          <button>
+            <fa-icon [icon]="faLock"> </fa-icon
+            ><a class="fullsize-sidenav-button-link" href="#">Logga in</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mobile-nav" *ngIf="viewport !== 'large' && viewport !== 'xlarge'">
+    <img class="mobile-logo" src="../../../assets/logo.png" alt="SEB logo" />
+    <div class="mobile-sidenav">
+      <ul class="mobile-sidenav-list">
+        <li class="mobile-sidenav-list-item">
+          <fa-icon [icon]="faSearch" size="sm"></fa-icon>
+        </li>
+        <li class="mobile-sidenav-list-item">
+          <fa-icon [icon]="faUser" size="sm"></fa-icon>
+        </li>
+        <li class="mobile-sidenav-list-item-login">
+          <button>
+            <fa-icon [icon]="faLock"> </fa-icon
+            ><a class="mobile-sidenav-button-link" href="#">Logga in</a>
+          </button>
+        </li>
+        <li class="mobile-sidenav-list-item">
+          <fa-icon [icon]="faBars" size="lg"></fa-icon>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
