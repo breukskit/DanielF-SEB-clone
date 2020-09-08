@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HamburgerDropdownComponent } from './hamburger-dropdown.component';
+import { MegaMenuComponent } from './mega-menu.component';
 
-describe('HamburgerDropdownComponent', () => {
-  let component: HamburgerDropdownComponent;
-  let fixture: ComponentFixture<HamburgerDropdownComponent>;
+describe('MegaMenuComponent', () => {
+  let component: MegaMenuComponent;
+  let fixture: ComponentFixture<MegaMenuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HamburgerDropdownComponent ]
+      declarations: [ MegaMenuComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HamburgerDropdownComponent);
+    fixture = TestBed.createComponent(MegaMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

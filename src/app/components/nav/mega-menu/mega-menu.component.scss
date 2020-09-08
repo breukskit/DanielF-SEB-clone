@@ -1,0 +1,71 @@
+.mega-menu {
+  position: absolute;
+  width: 100%;
+  background-color: #f8f8f8;
+  .mega-menu-list {
+    .no-children-item {
+      font-size: 1.25rem;
+      padding: 1.2rem 1rem 1rem 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      &:hover {
+        cursor: pointer;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+      }
+      .no-children-link {
+        color: #333;
+        padding-right: 0.5rem;
+      }
+    }
+    .with-children-item {
+      font-size: 1.25rem;
+      padding: 1.2rem 1rem 0rem 0rem;
+      .with-children-link {
+        color: #333;
+        padding-right: 0.5rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.submenu-privat {
+  padding-top: 1rem;
+  .submenu-privat-list {
+    .submenu-privat-item {
+      padding: 1rem 0rem;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      .submenu-privat-link {
+        color: #333;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.submenu-företag {
+  padding-top: 1rem;
+  .submenu-företag-list {
+    .submenu-företag-item {
+      padding: 1rem 0rem;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      .submenu-företag-link {
+        color: #333;
+        padding-left: 1rem;
+      }
+    }
+  }
+}

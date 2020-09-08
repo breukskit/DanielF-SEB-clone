@@ -72,10 +72,13 @@
             ><a class="mobile-sidenav-button-link" href="#">Logga in</a>
           </button>
         </li>
-        <li class="mobile-sidenav-list-item">
-          <fa-icon [icon]="faBars" size="lg"></fa-icon>
+        <li class="mobile-sidenav-list-item" (click)="toggleMegaMenu()">
+          <fa-icon *ngIf="!megaMenu" [icon]="faBars" size="lg"></fa-icon>
+          <fa-icon *ngIf="megaMenu" [icon]="faTimes" size="lg"></fa-icon>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<app-mega-menu *ngIf="megaMenu"></app-mega-menu>

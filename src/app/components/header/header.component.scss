@@ -1,7 +1,8 @@
 $primary-color: #0092e1;
 
 .hero {
-  background-image: url("../../../assets/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url("../../../assets/hero.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;

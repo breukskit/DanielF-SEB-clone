@@ -5,6 +5,7 @@ import {
   faUser,
   faLock,
   faBars,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { Store, select } from '@ngrx/store';
 import { selectViewport } from '../../store/selectors/viewport-selectors';
@@ -22,10 +23,17 @@ export class NavComponent implements OnInit {
   faUser = faUser;
   faLock = faLock;
   faBars = faBars;
+  faTimes = faTimes;
 
   viewport$: Observable<string>;
 
   viewport;
+
+  megaMenu = false;
+
+  toggleMegaMenu() {
+    this.megaMenu = !this.megaMenu;
+  }
 
   constructor(private store: Store<IAppState>) {
     this.viewport$ = this.store.pipe(select(selectViewport));
