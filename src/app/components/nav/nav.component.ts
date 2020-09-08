@@ -12,10 +12,53 @@ import { selectViewport } from '../../store/selectors/viewport-selectors';
 import { IAppState } from 'src/app/models/app-state';
 import { Observable } from 'rxjs';
 
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+  stagger,
+  keyframes,
+} from '@angular/animations';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        animate(
+          '200ms ease-in-out',
+          keyframes([
+            style({ opacity: 0, transform: 'translateY(50px)', offset: 0 }),
+            style({
+              opacity: 0.5,
+              transform: 'translateY(25px)',
+              offset: 0.5,
+            }),
+            style({ opacity: 1, transform: 'translateY(0px)', offset: 1.0 }),
+          ])
+        ),
+      ]),
+      transition(':leave', [
+        animate(
+          '200ms ease-out',
+          keyframes([
+            style({ opacity: 1, transform: 'translateY(0px)', offset: 0 }),
+            style({
+              opacity: 0.5,
+              transform: 'translateY(50px)',
+              offset: 0.5,
+            }),
+            style({ opacity: 0, transform: 'translateY(100px)', offset: 1.0 }),
+          ])
+        ),
+      ]),
+    ]),
+  ],
 })
 export class NavComponent implements OnInit {
   faSearch = faSearch;
@@ -30,6 +73,7 @@ export class NavComponent implements OnInit {
   viewport;
 
   megaMenu = false;
+  loginMenu = false;
 
   toggleMegaMenu() {
     this.megaMenu = !this.megaMenu;

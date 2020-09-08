@@ -6,14 +6,6 @@ import {
 import { Store, select } from '@ngrx/store';
 import { IAppState } from 'src/app/models/app-state';
 
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
-
 import { selectViewport } from '../../../store/selectors/viewport-selectors';
 
 @Component({

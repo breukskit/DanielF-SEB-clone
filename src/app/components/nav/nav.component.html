@@ -81,4 +81,6 @@
   </div>
 </nav>
 
-<app-mega-menu *ngIf="megaMenu"></app-mega-menu>
+<div @fadeInOut *ngIf="megaMenu">
+  <app-mega-menu></app-mega-menu>
+</div>
