@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 
 import { viewportReducer } from './store/reducers/viewport.reducer';
+import { HeaderComponent } from './components/header/header.component';
+import { HamburgerDropdownComponent } from './components/header/hamburger-dropdown/hamburger-dropdown.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent],
+  declarations: [AppComponent, NavComponent, HeaderComponent, HamburgerDropdownComponent],
   imports: [
     BrowserModule,
     FontAwesomeModule,

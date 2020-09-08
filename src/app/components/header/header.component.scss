@@ -1,0 +1,100 @@
+$primary-color: #0092e1;
+
+.hero {
+  background-image: url("../../../assets/hero.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 6rem);
+  .hero-container {
+    padding-top: 2.5rem;
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // @media (max-width: 766px) {
+    //   padding: 2.5rem 1rem 0rem 1rem;
+    // }
+    .hero-text-content {
+      max-width: 55rem;
+      padding: 4.5rem 2rem 0rem 2rem;
+      @media (max-width: 766px) {
+        padding: 4.5rem 1rem 0rem 1rem;
+      }
+      .hero-header {
+        font-size: 4.5rem;
+        color: #ffffff;
+        font-weight: 500;
+        line-height: 4.75rem;
+        margin-bottom: 2.5rem;
+        @media (max-width: 766px) {
+          font-size: 2.5rem;
+          line-height: 2.75rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+      .hero-paragraph {
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+      }
+      .hero-button {
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: $primary-color;
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        color: #ffffff;
+        white-space: nowrap;
+        min-width: 270px;
+        @media (max-width: 766px) {
+          width: 100%;
+          font-weight: 500;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: lighten($primary-color, 5%);
+        }
+      }
+    }
+    .hero-bottom-content {
+      background-color: #1a1a1a;
+      font-size: 1.2rem;
+      .hero-bottom-list {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 766px) {
+          flex-direction: column;
+        }
+        .hero-bottom-list-item {
+          padding: 0.5rem 0rem;
+          margin-right: 4rem;
+          white-space: nowrap;
+          color: #ffffff;
+          &:hover {
+            a {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+          @media (max-width: 766px) {
+            padding: 1rem 0rem;
+            border-bottom: 1px solid #ffffff;
+          }
+          .hero-bottom-list-link {
+            color: #ffffff;
+            padding-right: 0.5rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.specialCase {
+  border: none !important;
+}
